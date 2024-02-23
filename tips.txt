@@ -1,0 +1,20 @@
+fun main() {
+    println("Введите сумму счета")
+    var str : String? = readLine()
+val amount : Int = str?.toInt()  ?: 0
+
+    println("Введите количество участников")
+    str = readLine()
+val quantity : Int = str?.toInt() ?: 0
+
+    println("Введите процент чаевых")
+    str = readLine()
+val tips : Int = str?.toInt() ?: 0
+    var tipsAmount  = ((amount/100*tips)+amount)/quantity
+
+
+    println("Сумма счета $amount")
+    println("Количество участников $quantity")
+    println("Процент чаевых $tips")
+    println("Каждому участнику надо заплатить $tipsAmount")
+}
